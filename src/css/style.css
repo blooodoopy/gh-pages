@@ -1,0 +1,47 @@
+.fancybutton {
+  background-color: #ecf0f1;
+  border:1px solid #2c3e50;
+  padding: 10px;
+  margin: 4px 0;
+  color: #2c3e50;
+  font-family: 'Nanum Gothic Coding', monospace;
+  display: block;
+  
+}
+
+.fancybutton:hover {
+  animation: fadeTextColor 0.25s linear ;
+  background-color: #2c3e50;
+  color: #ecf0f1; 
+  
+}
+
+.fancybutton:active {
+  background-color: #4f5f72;
+  color: #ecf0f1; 
+  
+}
+
+@keyframes fadeTextColor {
+  0% { background-color: #ecf0f1; color: #3d4f61; }
+  100% { background-color: #3d4f61; color: #ecf0f1; }
+  
+}
+
+/* CSS GRID TIME */
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "... logo    ..."
+    "... buttons ..."
+    "... buttons ...";
+  
+}
+
+.buttons-wrapper {
+  grid-area: buttons;
+  display: grid;
+}
